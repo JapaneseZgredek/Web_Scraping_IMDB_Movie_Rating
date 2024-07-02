@@ -36,7 +36,7 @@ def save_to_csv_file(movie_titles: list[str],
             'Release Year': years_released[i],
             'Director': directors[i],
             'Description': descriptions[i],
-            'Rating': float(ratings[i])
+            'Rating': ratings[i].replace('.', ',')
         }
         data_list.append(data)
     df = pd.DataFrame(data_list)
